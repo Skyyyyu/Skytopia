@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skytopia — A Growtopia Private Server</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#ddc27e"/><circle cx="9" cy="10" r="1.4" fill="#33392a"/><circle cx="15" cy="10" r="1.4" fill="#33392a"/><path d="M8.5 14.5C9.5 16 14.5 16 15.5 14.5" stroke="#33392a" stroke-width="1.4" stroke-linecap="round"/></svg>
+      Skytopia
+    </div>
+    <nav class="nav-links">
+      <a href="#welcome">Welcome</a>
+      <a href="#creators">Creators</a>
+      <a href="#features">Features</a>
+      <a href="#howto">How to Play</a>
+    </nav>
+    <a href="#" class="nav-cta">Join Discord</a>
+  </div>
+</header>
+
+<audio id="bgMusic" src="assets/skyys.mp3" loop></audio>
+<div id="musicPanel" class="music-panel">
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle background music">
+    <span class="music-icon">🎵</span>
+  </button>
+  <input id="musicVolume" class="music-volume" type="range" min="0" max="100" value="50" aria-label="Music volume">
+</div>
+
+<section class="hero">
+  <div class="hero-sun"></div>
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+  <div class="cloud c3"></div>
+  <div class="cloud c4"></div>
+  <div class="sparkle s1">✦</div>
+  <div class="sparkle s2">✦</div>
+  <div class="sparkle s3">✦</div>
+  <div class="hero-content">
+    <div class="eyebrow">A Growtopia Private Server</div>
+    <h1>Skytopia <span>Private</span> Server</h1>
+    <p class="sub">Skytopia is a cozy little sky kingdom built on top of Growtopia — quests, grinding, and good vibes only. No cash grabs, no pay-to-win, just fluffy fun.</p>
+    <div class="hero-ctas">
+      <a href="https://discord.gg/NYAvpejyNU" target="_blank" class="btn-primary">Join Our Discord</a>
+      <a href="#howto" class="btn-ghost">Start Playing</a>
+    </div>
+  </div>
+  <svg class="hero-island" viewBox="0 0 1600 220" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+    <!-- distant little cloud puffs beneath the island -->
+    <g opacity="0.85">
+      <ellipse cx="150" cy="205" rx="55" ry="16" fill="#ffffff"/>
+      <ellipse cx="1420" cy="210" rx="60" ry="17" fill="#ffffff"/>
+      <ellipse cx="800" cy="215" rx="45" ry="13" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- island underside: rock/dirt -->
+    <path d="M0,80 C40,120 20,148 60,162 C100,178 140,158 180,175
+             C220,192 260,168 300,180 C340,192 380,172 420,182
+             C460,192 500,175 540,184 C620,196 680,178 720,188
+             C780,198 840,176 900,186 C980,198 1060,178 1120,188
+             C1200,198 1280,176 1340,186 C1400,196 1460,176 1500,184
+             C1540,192 1580,174 1600,164 L1600,80 Z"
+          fill="#c9a877"/>
+    <!-- short hanging roots -->
+    <path d="M150,182 C146,196 154,206 150,216" stroke="#a3814f" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M520,186 C516,200 524,210 520,218" stroke="#a3814f" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M900,188 C896,202 904,210 900,218" stroke="#a3814f" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M1280,188 C1276,200 1284,208 1280,216" stroke="#a3814f" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- grassy top -->
+    <path d="M0,55 C100,30 200,60 300,42 C400,24 500,55 600,40
+             C700,24 800,52 900,40 C1000,28 1100,55 1200,40
+             C1300,24 1400,52 1500,36 C1550,28 1580,34 1600,30
+             L1600,80 L0,80 Z"
+          fill="#8fcf9f"/>
+    <path d="M0,55 C100,30 200,60 300,42 C400,24 500,55 600,40
+             C700,24 800,52 900,40 C1000,28 1100,55 1200,40
+             C1300,24 1400,52 1500,36 C1550,28 1580,34 1600,30
+             L1600,20 C1580,24 1550,18 1500,26 C1400,42 1300,14 1200,30
+             C1100,45 1000,18 900,30 C800,42 700,14 600,30
+             C500,45 400,14 300,32 C200,50 100,20 0,45 Z"
+          fill="#a6e3b6"/>
+
+    <!-- little tree -->
+    <g transform="translate(300,32) scale(0.65)">
+      <rect x="-7" y="10" width="14" height="34" rx="6" fill="#a3814f"/>
+      <circle cx="0" cy="-6" r="30" fill="#7fcf95"/>
+      <circle cx="-22" cy="10" r="22" fill="#8fdba3"/>
+      <circle cx="24" cy="8" r="24" fill="#8fdba3"/>
+    </g>
+    <!-- little bush -->
+    <g transform="translate(1230,44) scale(0.6)">
+      <circle cx="0" cy="0" r="20" fill="#8fdba3"/>
+      <circle cx="20" cy="6" r="16" fill="#7fcf95"/>
+    </g>
+    <!-- flower dots -->
+    <circle cx="150" cy="56" r="3" fill="#5a9aa6"/>
+    <circle cx="163" cy="60" r="3" fill="#ddc27e"/>
+    <circle cx="1080" cy="52" r="3" fill="#5a9aa6"/>
+    <circle cx="1093" cy="57" r="3" fill="#a68c5f"/>
+  </svg>
+  <div class="hero-wave"></div>
+</section>
+
+<section id="welcome">
+  <div class="wrap">
+    <div class="welcome-grid">
+      <div class="emblem-frame">
+        <img class="circle-photo" src="assets/skyprem.png" alt="Skytopia world screenshot" onerror="this.onerror=null; this.src='';this.classList.add('img-empty');">
+      </div>
+      <div class="welcome-text">
+        <div class="kicker" style="text-align:left; margin-bottom:8px;">Welcome</div>
+        <h2>A little sky kingdom built for dreamers</h2>
+        <p>High above the clouds, Skytopia floats apart from the ordinary servers — ruled by kindness, creativity, and good old-fashioned grinding. Every reward here is earned, never bought.</p>
+        <p>Hop through the clouds and join a cozy community built around fair play, adorable builds, and a basket of features made to keep you smiling.</p>
+        <ul>
+          <li><span class="leaf">☁️</span> No pay-to-win — progress is earned, not bought</li>
+          <li><span class="leaf">🌈</span> A living quest system with real rewards</li>
+          <li><span class="leaf">⭐</span> Custom items and upgrades found nowhere else</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="creators">
+  <div class="wrap">
+    <div class="kicker"></div>
+    <h2 class="section-title">The Staff</h2>
+    <p class="section-sub">The creators spreading Skytopia cheer across the clouds.</p>
+    <div class="card-row">
+      <div class="creator-card">
+        <img class="circle-photo small" src="assets/skyprem.png" alt="Creator name" onerror="this.onerror=null; this.src='';this.classList.add('img-empty');">
+        <p>Open slot</p>
+      </div>
+      <div class="creator-card">
+        <img class="circle-photo small" src="assets/skyprem.png" alt="Creator name" onerror="this.onerror=null; this.src='';this.classList.add('img-empty');">
+        <p>Open slot</p>
+      </div>
+      <div class="creator-card">
+        <img class="circle-photo small" src="assets/skyprem.png" alt="Creator name" onerror="this.onerror=null; this.src='';this.classList.add('img-empty');">
+        <p>Open slot</p>
+      </div>
+      <div class="creator-card">
+        <img class="circle-photo small" src="assets/skyprem.png" alt="Creator name" onerror="this.onerror=null; this.src='';this.classList.add('img-empty');">
+        <p>Open slot</p>
+      </div>
+      <div class="creator-card">
+        <img class="circle-photo small" src="assets/skyprem.png" alt="Creator name" onerror="this.onerror=null; this.src='';this.classList.add('img-empty');">
+        <p>Open slot</p>
+      </div>
+    </div>
+
+    <div class="wotd-card">
+      <div class="wotd-media">
+        <img class="rect-photo" src="assets/Sky.png" alt="World of the Day screenshot" onerror="this.onerror=null; this.src='';this.classList.add('img-empty');">
+        <span class="badge"></span>
+      </div>
+      <div class="wotd-body">
+        <div class="label">Server Creator</div>
+        <h3>King</h3>
+        <p class="owner"></p>
+        <blockquote>"Build high enough, and you might just touch a rainbow."</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="feature-band">
+  <div class="wrap">
+    <div class="kicker">Features</div>
+    <h2 class="section-title">Tools of the Cloud Explorer</h2>
+    <p class="section-sub">Everything you need to float from newbie to sky legend.</p>
+    <div class="feature-list">
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 8.5L21 9L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9L9.5 8.5L12 2Z" fill="#fff"/></svg></div>
+        <h3>Upgrade System</h3>
+        <p>Sprinkle a little stardust on your gear. More upgrades, more sparkle, more power.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" fill="#fff"/></svg></div>
+        <h3>Turn-Based PvP & PvE</h3>
+        <p>Use your brain to the fullest.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="6" fill="#fff"/></svg></div>
+        <h3>Custom Items</h3>
+        <p>Adorable, one-of-a-kind items you won't find on any other server.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 4H18V20L12 17L6 20V4Z" fill="#fff"/></svg></div>
+        <h3>Team Boss Fight System</h3>
+        <p>Join forces with your guild or friends and battle powerful monsters across SkyTopia!.</p>
+      </div>
+    </div>
+
+    <div class="showcase">
+      <div class="showcase-row">
+        <div class="showcase-media">
+          <video class="feature-video" src="assets/Random.mp4" muted loop playsinline controls onerror="this.closest('.showcase-media').classList.add('video-empty')"></video>
+          <div class="play"></div>
+        </div>
+        <div class="showcase-text">
+          <div class="tag">Upgrade System</div>
+          <h3>Sparkle up your Sword</h3>
+          <p>Every upgrade adds a little more shine. Watch your gear glow brighter with each step.</p>
+        </div>
+      </div>
+      <div class="showcase-row reverse">
+        <div class="showcase-media">
+          <video class="feature-video" src="assets/pvp.mp4" muted loop playsinline controls onerror="this.closest('.showcase-media').classList.add('video-empty')"></video>
+          <div class="play"></div>
+        </div>
+        <div class="showcase-text">
+          <div class="tag">Turn-Based PvP & PvE</div>
+          <h3>Show who you are</h3>
+          <p>Use your brain to the fullest.</p>
+        </div>
+      </div>
+      <div class="showcase-row">
+        <div class="showcase-media">
+          <video class="feature-video" src="assets/citems.mp4" muted loop playsinline controls onerror="this.closest('.showcase-media').classList.add('video-empty')"></video>
+          <div class="play"></div>
+        </div>
+        <div class="showcase-text">
+          <div class="tag">Custom Items</div>
+          <h3>Treasures found only in Skytopia</h3>
+          <p>A custom item set made just for us — cute, rare, and worth the climb.</p>
+        </div>
+      </div>
+      <div class="showcase-row reverse">
+        <div class="showcase-media">
+          <video class="feature-video" src="assets/boss.mp4" muted loop playsinline controls onerror="this.closest('.showcase-media').classList.add('video-empty')"></video>
+          <div class="play"></div>
+        </div>
+        <div class="showcase-text">
+          <div class="tag">Team Boss Fight System</div>
+          <h3>A true warrior never look back</h3>
+          <p>Join forces with your guild or friends and battle powerful monsters across SkyTopia!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="howto">
+  <div class="wrap">
+    <div class="kicker">Get Started</div>
+    <h2 class="section-title">How to Play</h2>
+    <p class="section-sub">Choose your path into the clouds.</p>
+
+    <div class="tabs">
+      <div class="tab-btn active" data-tab="android">Android</div>
+      <div class="tab-btn" data-tab="windows">Windows</div>
+      <div class="tab-btn" data-tab="ios">iOS</div>
+      <div class="tab-btn" data-tab="mac">Mac</div>
+    </div>
+
+    <div class="tab-panel active" id="android">
+      <div class="setup-card">
+        <h3>Android Setup</h3>
+        <p style="color:var(--ink-soft); margin-bottom:16px; line-height:1.8;">Download the Skytopia APK and float in right away.</p>
+        <a href="https://www.mediafire.com/file/ajs53yodzi0z3s8/Skytopia.apk/file" target="_blank" class="download-btn">Download Skytopia APK</a>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="windows">
+      <div class="setup-card">
+        <h3>Windows Setup</h3>
+        <ol>
+          <li>Press <code>Win + R</code>, type <code>C:\Windows\System32\drivers\etc</code></li>
+          <li>Edit the file <code>hosts</code> with Notepad</li>
+          <li>Add these lines:</li>
+        </ol>
+        <div class="code-block">51.79.180.62 growtopia1.com<br>51.79.180.62 growtopia2.com<br>51.79.180.62 www.growtopia1.com<br>51.79.180.62 www.growtopia2.com</div>
+        <ol start="4">
+          <li>Save the file, then launch Growtopia</li>
+          <li>Enjoy playing Skytopia</li>
+        </ol>
+        <a href="https://www.mediafire.com/file/kstsyobe71tx2m5/Skytopia_Patcher.bat/file" target="_blank" class="download-btn">Download Auto Patcher</a>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="ios">
+      <div class="setup-card">
+        <h3>iOS Setup</h3>
+        <ol>
+          <li>Download Surge 5 from the App Store</li>
+          <li>Open Default.conf, tap Import Profile, and paste the host URL</li>
+          <div class="code-block"> https://dash.gtps.cloud/ios/1841 </div>
+           <ol start="3">
+          <li>Allow the VPN setup, then open Growtopia</li>
+          <li>Enjoy playing Skytopia</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="mac">
+      <div class="setup-card">
+        <h3>Mac Setup</h3>
+        <ol>
+          <li>Edit the <code>/etc/hosts</code> file just as on Windows</li>
+          <li>Add the same server IP addresses</li>
+          <li>Save, launch Growtopia, and connect to Skytopia</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#ddc27e"/><circle cx="9" cy="10" r="1.4" fill="#33392a"/><circle cx="15" cy="10" r="1.4" fill="#33392a"/><path d="M8.5 14.5C9.5 16 14.5 16 15.5 14.5" stroke="#33392a" stroke-width="1.4" stroke-linecap="round"/></svg>
+      Skytopia
+    </div>
+    <p class="tag">A Growtopia private server for those who'd rather earn their place in the clouds than buy it.</p>
+    <div class="footer-links">
+      <a href="#welcome">Welcome</a>
+      <a href="#creators">Creators</a>
+      <a href="#features">Features</a>
+      <a href="#howto">How to Play</a>
+    </div>
+    <div class="copyright">© 2025 Skytopia Server. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+var bgMusic = document.getElementById('bgMusic');
+var musicToggle = document.getElementById('musicToggle');
+var musicIcon = musicToggle.querySelector('.music-icon');
+var musicVolume = document.getElementById('musicVolume');
+var isPlaying = false;
+
+bgMusic.volume = musicVolume.value / 100;
+
+function startMusic(){
+  bgMusic.play().then(function(){
+    isPlaying = true;
+    musicIcon.textContent = '⏸';
+    musicToggle.classList.add('playing');
+  }).catch(function(){
+    // File missing, or browser still blocking — quietly do nothing
+  });
+}
+
+// Try to start the moment the visitor does anything at all on the page
+['click', 'touchstart', 'keydown'].forEach(function(evt){
+  document.addEventListener(evt, function once(){
+    if (!isPlaying) startMusic();
+    document.removeEventListener(evt, once);
+  }, { once:true });
+});
+
+musicToggle.addEventListener('click', function(){
+  if (isPlaying){
+    bgMusic.pause();
+    musicIcon.textContent = '🎵';
+    musicToggle.classList.remove('playing');
+    isPlaying = false;
+  } else {
+    startMusic();
+  }
+});
+
+musicVolume.addEventListener('input', function(){
+  bgMusic.volume = musicVolume.value / 100;
+});
+
+document.querySelectorAll('.showcase-media').forEach(function(media){
+  var video = media.querySelector('.feature-video');
+  var playBtn = media.querySelector('.play');
+  if (!video || !playBtn) return;
+  playBtn.addEventListener('click', function(){
+    video.play();
+  });
+  video.addEventListener('play', function(){
+    media.classList.add('playing');
+  });
+  video.addEventListener('pause', function(){
+    media.classList.remove('playing');
+  });
+});
+</script>
+
+</body>
+</html>
